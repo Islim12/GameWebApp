@@ -1,0 +1,28 @@
+@model IEnumerable<Game>
+
+
+
+<div>
+	@*Command Line*@
+	<h1>List of Games</h1>
+	<hr />
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>List Price</th>
+			</tr>
+		</thead>
+		@foreach (var g in Model)
+		{
+			<tr>
+				<td>@g.Id</td>
+				<td>@g.Name</td>
+				<td><b>(@g.ListPrice)</b></td>
+			</tr>
+		}	
+	</table>
+</div>
+
+
